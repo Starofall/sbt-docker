@@ -5,7 +5,7 @@ This repository contains **Dockerfile** of [Scala](http://www.scala-lang.org), [
 
 ## Base Docker Image ##
 
-* [hseeberger/scala-sbt](https://hub.docker.com/r/hseeberger/scala-sbt/)
+* [jpetazzo/dind](https://hub.docker.com/_/docker/)
 
 
 ## Installation ##
