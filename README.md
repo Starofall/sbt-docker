@@ -1,11 +1,11 @@
 # Scala and sbt Dockerfile
 
-This repository contains **Dockerfile** of [Scala](http://www.scala-lang.org), [sbt](http://www.scala-sbt.org) and [docker](https://www.docker.com).
+This repository contains **Dockerfile** of [JRE](https://www.oracle.com/java/index.html), [sbt](http://www.scala-sbt.org) and [docker](https://www.docker.com).
 
 
 ## Base Docker Image ##
 
-* [jpetazzo/dind](https://hub.docker.com/_/docker/)
+* [docker:latest](https://hub.docker.com/r/_/docker/)
 
 
 ## Installation ##
