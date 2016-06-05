@@ -17,7 +17,7 @@ COPY /lib /var/cache/apk
 WORKDIR /usr/lib/jvm
 
 RUN apk update && apk upgrade && \
-    apk add --update bash wget curl tree && \
+    apk add --update bash wget curl tree git && \
     apk add --update libgcc && \
     apk add --allow-untrusted /var/cache/apk/glibc-2.21-r2.apk && \
     apk add --allow-untrusted /var/cache/apk/glibc-bin-2.21-r2.apk && \
