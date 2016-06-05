@@ -5,8 +5,9 @@ ENV SBT_HOME /usr/local/sbt
 ENV PATH ${PATH}:${SBT_HOME}/bin
 
 RUN apk update && apk upgrade && \
-    apk-install curl wget bash tree && \
     echo -ne "Alpine Linux 3.3 image. (`uname -rsv`)\n" >> /root/.built
+
+RUN apk add --update bash && rm -rf /var/cache/apk/*
 
 # Install sbt
 RUN curl -sL "http://dl.bintray.com/sbt/native-packages/sbt/$SBT_VERSION/sbt-$SBT_VERSION.tgz" | gunzip | tar -x -C /usr/local && \
