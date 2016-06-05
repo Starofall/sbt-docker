@@ -26,7 +26,7 @@ RUN \
 RUN \
   curl -fsL http://downloads.typesafe.com/scala/$SCALA_VERSION/scala-$SCALA_VERSION.tgz | tar xfz - -C /root/ && \
   echo >> /root/.bashrc && \
-  echo 'export PATH=~/scala-$SCALA_VERSION/bin:$PATH' >> /root/.bashrc
+  echo 'export PATH=~/scala-$SCALA_VERSION/bin:$PATH' >> ~/.bashrc
 
 RUN \
   curl -L -o sbt-$SBT_VERSION.deb http://dl.bintray.com/sbt/debian/sbt-$SBT_VERSION.deb && \
@@ -37,4 +37,4 @@ RUN \
   sbt sbtVersion
 
 
-WORKDIR /root
+WORKDIR /tmp
