@@ -5,6 +5,7 @@ ENV JAVA_VERSION=8 JAVA_UPDATE=91 JAVA_BUILD=14 JAVA_PACKAGE=server-jre JAVA_HOM
 
 # SBT environment
 ENV SBT_VERSION=0.13.11 SBT_HOME=/usr/local/sbt
+ENV SBT_OPTS -Xms1G -Xmx2G -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=1G
 
 # Set environment
 ENV PATH=${PATH}:${JAVA_HOME}/bin
@@ -17,7 +18,7 @@ COPY /lib /var/cache/apk
 WORKDIR /usr/lib/jvm
 
 RUN apk update && apk upgrade && \
-    apk add --update bash wget curl tree git && \
+    apk add --update bash wget curl tree git bc && \
     apk add --update libgcc && \
     apk add --allow-untrusted /var/cache/apk/glibc-2.21-r2.apk && \
     apk add --allow-untrusted /var/cache/apk/glibc-bin-2.21-r2.apk && \
