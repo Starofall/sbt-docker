@@ -11,4 +11,4 @@ ENV SBT_OPTS -Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPerm
 
 RUN \
   apt-get update && \
-  apt-get install docker 
+  apt-get install docker -y 
