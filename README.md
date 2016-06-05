@@ -1,5 +1,7 @@
 # Scala and sbt Dockerfile
 
+[![build status](https://gitlab.com/e8kor/sbt-docker/badges/master/build.svg)](https://gitlab.com/e8kor/sbt-docker/commits/master)
+
 This repository contains **Dockerfile** of [JRE](https://www.oracle.com/java/index.html), [sbt](http://www.scala-sbt.org) and [docker](https://www.docker.com).
 
 
