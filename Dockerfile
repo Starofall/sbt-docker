@@ -57,6 +57,6 @@ RUN apk update && apk upgrade && \
 # Install sbt
 RUN curl -sL "http://dl.bintray.com/sbt/native-packages/sbt/$SBT_VERSION/sbt-$SBT_VERSION.tgz" | gunzip | tar -x -C /usr/local
 
-RUN sbt
+RUN /usr/local/sbt
 
 WORKDIR /app
