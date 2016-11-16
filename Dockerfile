@@ -4,8 +4,8 @@ FROM docker:latest
 ENV JAVA_VERSION=8 JAVA_UPDATE=91 JAVA_BUILD=14 JAVA_PACKAGE=server-jre JAVA_HOME=/usr/lib/jvm/default-jvm
 
 # SBT environment
-ENV SBT_VERSION=0.13.11 SBT_HOME=/usr/local/sbt
-ENV SBT_OPTS -Xms1G -Xmx2G -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=1G
+ENV SBT_VERSION=0.13.13 SBT_HOME=/usr/local/sbt
+ENV SBT_OPTS -Xms1G -Xmx2G -Xss1M -XX:+CMSClassUnloadingEnabled
 
 # Set environment
 ENV PATH=${PATH}:${JAVA_HOME}/bin
@@ -56,5 +56,7 @@ RUN apk update && apk upgrade && \
 
 # Install sbt
 RUN curl -sL "http://dl.bintray.com/sbt/native-packages/sbt/$SBT_VERSION/sbt-$SBT_VERSION.tgz" | gunzip | tar -x -C /usr/local
+
+RUN sbt
 
 WORKDIR /app
