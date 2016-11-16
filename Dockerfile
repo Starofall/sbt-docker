@@ -55,8 +55,6 @@ RUN apk update && apk upgrade && \
     echo -ne "- with `java -version 2>&1 | awk 'NR == 2'`\n" >> /root/.built
 
 # Install sbt
-RUN curl -sL "http://dl.bintray.com/sbt/native-packages/sbt/$SBT_VERSION/sbt-$SBT_VERSION.tgz" | gunzip | tar -x -C /usr/local
-
-RUN sbt
+RUN curl -sL "http://dl.bintray.com/sbt/native-packages/sbt/$SBT_VERSION/sbt-$SBT_VERSION.tgz" | gunzip | tar -x -C /usr/local && sbt exit
 
 WORKDIR /app
