@@ -18,6 +18,7 @@ COPY /lib /var/cache/apk
 WORKDIR /usr/lib/jvm
 
 RUN apk update && apk upgrade && \
+    apk add --update openssh-client && \
     apk add --update bash wget curl tree git bc && \
     apk add --update libgcc && \
     apk add --allow-untrusted /var/cache/apk/glibc-2.21-r2.apk && \
