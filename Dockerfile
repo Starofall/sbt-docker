@@ -1,7 +1,7 @@
 FROM docker:latest
 
 # Java Version
-ENV JAVA_VERSION=8 JAVA_UPDATE=91 JAVA_BUILD=14 JAVA_PACKAGE=server-jre JAVA_HOME=/usr/lib/jvm/default-jvm
+ENV JAVA_VERSION=8 JAVA_UPDATE=151 JAVA_BUILD=12 JAVA_PACKAGE=server-jre JAVA_HOME=/usr/lib/jvm/default-jvm
 
 # SBT environment
 ENV SBT_VERSION=0.13.16
