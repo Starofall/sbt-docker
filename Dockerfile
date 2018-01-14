@@ -26,7 +26,7 @@ RUN apk update && apk upgrade && \
 
 # Install sbt
 RUN mkdir -p $SBT_HOME
-RUN curl -sL "http://dl.bintray.com/sbt/native-packages/sbt/$SBT_VERSION/sbt-$SBT_VERSION.tgz" | gunzip | tar -x -C $SBT_HOME --strip-components=1
+RUN curl -sL "https://cocl.us/sbt-0.13.16.tgz" | gunzip | tar -x -C $SBT_HOME --strip-components=1
 
 RUN sbt exit
 
