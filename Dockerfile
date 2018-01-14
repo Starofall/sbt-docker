@@ -19,7 +19,7 @@ COPY /lib /var/cache/apk
 WORKDIR /usr/lib/jvm
 
 RUN apk update && apk upgrade && \
-    apk add --update bash wget curl tree git bc openjdk-9-jdk libgcc && \
+    apk add --update bash wget curl tree git bc openjdk8-jre-base libgcc && \
     apk add --allow-untrusted /var/cache/apk/glibc-2.21-r2.apk && \
     apk add --allow-untrusted /var/cache/apk/glibc-bin-2.21-r2.apk && \
     /usr/glibc/usr/bin/ldconfig /lib /usr/glibc/usr/lib 
